@@ -12,9 +12,6 @@ assign func3 = instr[W-18:W-20];
 assign func75 = instr[W-6];
 assign op5 = instr[W-30];
 
-
-
-
 always_comb
 case (func3)
     3'b010: ALUctrl = 3'b101; // slt
