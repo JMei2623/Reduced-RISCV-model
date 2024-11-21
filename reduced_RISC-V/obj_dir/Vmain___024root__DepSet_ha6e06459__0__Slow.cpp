@@ -184,6 +184,15 @@ VL_ATTR_COLD void Vmain___024root___stl_sequent__TOP__0(Vmain___024root* vlSelf)
                                                       + vlSelfRef.main__DOT__D2__DOT__PC))] 
                                                  << 0x10U) 
                                                 | (IData)(vlSelfRef.__VdfgRegularize_h6171c202_0_0));
+    vlSelfRef.main__DOT__ResultSrc = ((3U == (IData)(vlSelfRef.main__DOT__C1__DOT__op7))
+                                       ? 1U : ((0x67U 
+                                                == (IData)(vlSelfRef.main__DOT__C1__DOT__op7))
+                                                ? 2U
+                                                : (
+                                                   (0x6fU 
+                                                    == (IData)(vlSelfRef.main__DOT__C1__DOT__op7))
+                                                    ? 2U
+                                                    : 0U)));
     __Vtableidx4 = vlSelfRef.main__DOT__C1__DOT__op7;
     vlSelfRef.main__DOT__RegWrite = Vmain__ConstPool__TABLE_h58917218_0
         [__Vtableidx4];
@@ -243,47 +252,57 @@ VL_ATTR_COLD void Vmain___024root___stl_sequent__TOP__0(Vmain___024root* vlSelf)
                                          : vlSelfRef.main__DOT__D1__DOT__R1__DOT__RomArr
                                         [(0x1fU & (vlSelfRef.main__DOT__instr 
                                                    >> 0x14U))]);
-    vlSelfRef.main__DOT__D1__DOT__DIn = ((4U & (IData)(vlSelfRef.main__DOT__ALUctrl))
-                                          ? ((2U & (IData)(vlSelfRef.main__DOT__ALUctrl))
-                                              ? (vlSelfRef.main__DOT__D1__DOT__DOut1 
-                                                 + vlSelfRef.main__DOT__D1__DOT__N2)
-                                              : ((1U 
-                                                  & (IData)(vlSelfRef.main__DOT__ALUctrl))
-                                                  ? 
-                                                 ((vlSelfRef.main__DOT__D1__DOT__DOut1 
-                                                   < vlSelfRef.main__DOT__D1__DOT__N2)
-                                                   ? 1U
-                                                   : 0U)
-                                                  : 
-                                                 (vlSelfRef.main__DOT__D1__DOT__DOut1 
-                                                  + vlSelfRef.main__DOT__D1__DOT__N2)))
-                                          : ((2U & (IData)(vlSelfRef.main__DOT__ALUctrl))
-                                              ? ((1U 
+    vlSelfRef.main__DOT__D1__DOT__DOutAlu = ((4U & (IData)(vlSelfRef.main__DOT__ALUctrl))
+                                              ? ((2U 
                                                   & (IData)(vlSelfRef.main__DOT__ALUctrl))
                                                   ? 
                                                  (vlSelfRef.main__DOT__D1__DOT__DOut1 
-                                                  | vlSelfRef.main__DOT__D1__DOT__N2)
+                                                  + vlSelfRef.main__DOT__D1__DOT__N2)
                                                   : 
-                                                 (vlSelfRef.main__DOT__D1__DOT__DOut1 
-                                                  & vlSelfRef.main__DOT__D1__DOT__N2))
-                                              : ((1U 
+                                                 ((1U 
+                                                   & (IData)(vlSelfRef.main__DOT__ALUctrl))
+                                                   ? 
+                                                  ((vlSelfRef.main__DOT__D1__DOT__DOut1 
+                                                    < vlSelfRef.main__DOT__D1__DOT__N2)
+                                                    ? 1U
+                                                    : 0U)
+                                                   : 
+                                                  (vlSelfRef.main__DOT__D1__DOT__DOut1 
+                                                   + vlSelfRef.main__DOT__D1__DOT__N2)))
+                                              : ((2U 
                                                   & (IData)(vlSelfRef.main__DOT__ALUctrl))
                                                   ? 
-                                                 (vlSelfRef.main__DOT__D1__DOT__DOut1 
-                                                  - vlSelfRef.main__DOT__D1__DOT__N2)
+                                                 ((1U 
+                                                   & (IData)(vlSelfRef.main__DOT__ALUctrl))
+                                                   ? 
+                                                  (vlSelfRef.main__DOT__D1__DOT__DOut1 
+                                                   | vlSelfRef.main__DOT__D1__DOT__N2)
+                                                   : 
+                                                  (vlSelfRef.main__DOT__D1__DOT__DOut1 
+                                                   & vlSelfRef.main__DOT__D1__DOT__N2))
                                                   : 
-                                                 (vlSelfRef.main__DOT__D1__DOT__DOut1 
-                                                  + vlSelfRef.main__DOT__D1__DOT__N2))));
-    vlSelfRef.main__DOT__D2__DOT__PCN = ((((0x63U == (IData)(vlSelfRef.main__DOT__C1__DOT__op7)) 
-                                           || ((0x67U 
-                                                == (IData)(vlSelfRef.main__DOT__C1__DOT__op7)) 
-                                               || (0x6fU 
-                                                   == (IData)(vlSelfRef.main__DOT__C1__DOT__op7)))) 
-                                          & (0U != vlSelfRef.main__DOT__D1__DOT__DIn))
-                                          ? (vlSelfRef.main__DOT__D2__DOT__PC 
-                                             + vlSelfRef.main__DOT__IMMop)
-                                          : ((IData)(4U) 
-                                             + vlSelfRef.main__DOT__D2__DOT__PC));
+                                                 ((1U 
+                                                   & (IData)(vlSelfRef.main__DOT__ALUctrl))
+                                                   ? 
+                                                  (vlSelfRef.main__DOT__D1__DOT__DOut1 
+                                                   - vlSelfRef.main__DOT__D1__DOT__N2)
+                                                   : 
+                                                  (vlSelfRef.main__DOT__D1__DOT__DOut1 
+                                                   + vlSelfRef.main__DOT__D1__DOT__N2))));
+    vlSelfRef.main__DOT____Vcellout__D2__PCN = ((((0x63U 
+                                                   == (IData)(vlSelfRef.main__DOT__C1__DOT__op7)) 
+                                                  || ((0x67U 
+                                                       == (IData)(vlSelfRef.main__DOT__C1__DOT__op7)) 
+                                                      || (0x6fU 
+                                                          == (IData)(vlSelfRef.main__DOT__C1__DOT__op7)))) 
+                                                 & (0U 
+                                                    != vlSelfRef.main__DOT__D1__DOT__DOutAlu))
+                                                 ? 
+                                                (vlSelfRef.main__DOT__D2__DOT__PC 
+                                                 + vlSelfRef.main__DOT__IMMop)
+                                                 : 
+                                                ((IData)(4U) 
+                                                 + vlSelfRef.main__DOT__D2__DOT__PC));
 }
 
 VL_ATTR_COLD void Vmain___024root___eval_triggers__stl(Vmain___024root* vlSelf);
@@ -352,17 +371,21 @@ VL_ATTR_COLD void Vmain___024root___ctor_var_reset(Vmain___024root* vlSelf) {
     vlSelf->main__DOT__ALUctrl = VL_RAND_RESET_I(3);
     vlSelf->main__DOT__RegWrite = VL_RAND_RESET_I(1);
     vlSelf->main__DOT__IMMsrc = VL_RAND_RESET_I(2);
+    vlSelf->main__DOT__ResultSrc = VL_RAND_RESET_I(2);
+    vlSelf->main__DOT____Vcellout__D2__PCN = VL_RAND_RESET_I(32);
     vlSelf->main__DOT__D1__DOT__DOut1 = VL_RAND_RESET_I(32);
     vlSelf->main__DOT__D1__DOT__N2 = VL_RAND_RESET_I(32);
-    vlSelf->main__DOT__D1__DOT__DIn = VL_RAND_RESET_I(32);
+    vlSelf->main__DOT__D1__DOT__DOutAlu = VL_RAND_RESET_I(32);
     for (int __Vi0 = 0; __Vi0 < 32; ++__Vi0) {
         vlSelf->main__DOT__D1__DOT__R1__DOT__RomArr[__Vi0] = VL_RAND_RESET_I(32);
     }
     vlSelf->main__DOT__D1__DOT__I1__DOT__sign = VL_RAND_RESET_I(1);
+    for (int __Vi0 = 0; __Vi0 < 256; ++__Vi0) {
+        vlSelf->main__DOT__D1__DOT__R2__DOT__RamArray[__Vi0] = VL_RAND_RESET_I(32);
+    }
     vlSelf->main__DOT__C1__DOT__op7 = VL_RAND_RESET_I(7);
     vlSelf->main__DOT__A11__DOT__func3 = VL_RAND_RESET_I(3);
     vlSelf->main__DOT__D2__DOT__PC = VL_RAND_RESET_I(32);
-    vlSelf->main__DOT__D2__DOT__PCN = VL_RAND_RESET_I(32);
     for (int __Vi0 = 0; __Vi0 < 256; ++__Vi0) {
         vlSelf->main__DOT__D2__DOT__R1__DOT__RomArr[__Vi0] = VL_RAND_RESET_I(8);
     }

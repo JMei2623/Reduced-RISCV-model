@@ -14,9 +14,13 @@ logic [WA-1:0] AdOut2;
 logic ALUsrc;
 logic [1:0] ALUop;
 logic [2:0] ALUctrl;
+logic RamWrite;
 logic RegWrite;
 logic [1:0] IMMsrc;
+logic [1:0] ResultSrc;
 logic PCsrc;
+
+logic PCN;
 
 logic EQ;
 
@@ -35,8 +39,12 @@ datapath1 D1(
 
     .ALUsrc(ALUsrc),
     .ALUctrl(ALUctrl),
+    .RamWrite(RamWrite),
     .RegWrite(RegWrite),
     .IMMsrc(IMMsrc),
+    .ResultSrc(ResultSrc),
+
+    .PCN(PCN),
 
     .IMM(IMMop),
     .EQ(EQ),
@@ -48,10 +56,12 @@ control C1(
     .EQ(EQ),
 
     .RegWrite(RegWrite),
+    .RamWrite(RamWrite),
     .ALUop(ALUop),
     .ALUsrc(ALUsrc),
     .IMMsrc(IMMsrc),
-    .PCsrc(PCsrc)
+    .PCsrc(PCsrc),
+    .ResultSrc(ResultSrc)
 );
 
 aludecode A11(
@@ -67,7 +77,8 @@ datapath2 D2(
     .PCsrc(PCsrc),
     .IMMop(IMMop),
 
-    .instr(instr)
+    .instr(instr),
+    .PCN(PCN)
 );
 
 endmodule

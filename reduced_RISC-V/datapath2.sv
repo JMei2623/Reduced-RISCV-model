@@ -3,11 +3,12 @@ module datapath2 #(W = 32)(
     input logic rst,
     input logic PCsrc,
     input logic [W-1:0] IMMop,
+
+    output logic [W-1:0] PCN,
     output logic [W-1:0] instr
 );
 
 logic [W-1:0] PC;
-logic [W-1:0] PCN;
 logic [W-1:0] branch_pc;
 
 assign branch_pc = PC + IMMop;

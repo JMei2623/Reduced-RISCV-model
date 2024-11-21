@@ -2,10 +2,12 @@ module control #(parameter W = 32)(
     input logic [W-1:0] instr,
     input logic EQ,
     output logic RegWrite,
+    output logic RamWrite,
     output logic [1:0] ALUop,
     output logic ALUsrc,
     output logic [1:0] IMMsrc,
-    output logic PCsrc
+    output logic PCsrc,
+    output logic [1:0] ResultSrc
 );
 
 // manipulation in this part ...
@@ -90,8 +92,22 @@ case (EQ)
     default: PCsrc_req2 = 1'b0;
 endcase
 
+always_comb 
+case (op7)
+    7'b0100011: RamWrite = 1'b1; // s-type
+    default: RamWrite = 1'b0;
+endcase
+
 always_comb begin
     PCsrc = PCsrc_req1 && PCsrc_req2;
 end
+
+always_comb 
+case (op7)
+    7'b0000011: ResultSrc = 2'b01; // load
+    7'b1100111: ResultSrc = 2'b10; // j-type
+    7'b1101111: ResultSrc = 2'b10;
+    default: ResultSrc = 2'b00;
+endcase
 
 endmodule
